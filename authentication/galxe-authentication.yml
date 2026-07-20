@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration/getting-started/authentication
+docs: https://docs.galxe.com/galxe-integration/getting-started/authentication
+description: >-
+  Galxe exposes two distinct authentication surfaces. (1) The Integration /
+  Server GraphQL API authenticates with a dashboard-issued API access token sent
+  in the custom `access-token` request header. (2) "Sign in with Galxe" is a
+  standard OAuth 2.0 authorization-code (with PKCE) identity flow that lets an
+  app read a Galxe ID user's connected accounts and wallet addresses.
+summary:
+  types: [apiKey, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+  - name: accessToken
+    type: apiKey
+    in: header
+    parameter_name: access-token
+    description: >-
+      Server API access token generated in the Galxe dashboard under Account →
+      Settings → Server API → "Generate New API Tokens". Shown once; store
+      securely. Sent as `access-token: <TOKEN>` on every GraphQL request to
+      https://graphigo-business.prd.galaxy.eco/query.
+    obtain: https://dashboard.galxe.com/
+    errors:
+      - code: TOKEN_REQUIRED
+        http_status: 401
+        meaning: access-token header missing
+      - code: INVALID_TOKEN
+        http_status: 401
+        meaning: access-token invalid/revoked
+  - name: signInWithGalxe
+    type: oauth2
+    flow: authorizationCode
+    pkce: recommended
+    authorizationUrl: https://app.galxe.com/oauth
+    tokenUrl: https://api.galxe.com/oauth/auth/2/token
+    docs: https://docs.galxe.com/galxe-id/galxe-id-integration/galxe-id-oauth
+    description: >-
+      "Sign in with Galxe" — OAuth 2.0 authorization-code grant (PKCE supported
+      via code_challenge/code_challenge_method) granting access to a Galxe ID
+      user's connected identities. Authorization codes expire after 10 minutes;
+      access tokens live 86400s (24h) with refresh-token support. Client IDs are
+      issued on request via dashboard live-chat support.
+    parameters: [client_id, client_secret, redirect_uri, state, code_challenge, code_challenge_method]
