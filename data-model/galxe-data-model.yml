@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.galxe.com/galxe-integration/api-reference
+description: >-
+  Entity-relationship model derived from the documented Galxe Integration
+  GraphQL types (Credential, Quest, Space, Starboard) and their fields. Ids and
+  enums are captured verbatim from the API reference field tables.
+entities:
+  - name: Space
+    id: id (String)
+    key_fields: [name, description, loyaltyPointsRanks]
+    relationships:
+      - has_many: Quest
+        via: campaigns
+      - has_many: LoyaltyPointsRank
+        via: loyaltyPointsRanks
+  - name: Quest
+    id: id (ID, hash)
+    key_fields: [name, status, participantsCount, type, gasType]
+    enums:
+      status: [Draft, Active, NotStarted, Expired, CapReached, Deleted]
+      type: [Drop, MysteryBox, Airdrop, Points, ExternalLink]
+      gasType: [Gas, Gasless]
+    relationships:
+      - belongs_to: Space
+        via: space
+      - has_many: Credential
+        via: credentials
+  - name: Credential
+    id: id (ID)
+    key_fields: [name, credType, credSource, eligible, syncStatus, itemCount]
+    enums:
+      credType: [TWITTER, DISCORD, EVM_ADDRESS, SOLANA_ADDRESS, GITHUB, EMAIL]
+      credSource: [TWITTER_FOLLOW, DISCORD_MEMBER, CONTRACT_NFT_HOLDER, WALLET_BALANCE, QUIZ, API]
+    relationships:
+      - belongs_to: Space
+        via: space
+  - name: LoyaltyPointsRank
+    key_fields: [rank, points, address]
+    relationships:
+      - belongs_to: Space
+        via: space
+  - name: Starboard
+    id: id (ID)
+    key_fields: [basicInfo, leaderboard, xUserProfile, rank]
+    enums:
+      type: [TWITTER, ONCHAIN]
+      verification: [blue, business, government, none]

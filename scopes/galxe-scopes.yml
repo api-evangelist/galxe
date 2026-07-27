@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-id/galxe-id-integration/galxe-id-oauth
+docs: https://docs.galxe.com/galxe-id/galxe-id-integration/galxe-id-oauth
+description: >-
+  OAuth 2.0 scopes for "Sign in with Galxe" (Galxe ID). Each scope grants the
+  requesting app read access to one class of the user's connected identity or
+  wallet address. Requested at the authorization endpoint
+  https://app.galxe.com/oauth and exchanged at
+  https://api.galxe.com/oauth/auth/2/token.
+schemes:
+  - name: signInWithGalxe
+    source: https://docs.galxe.com/galxe-id/galxe-id-integration/galxe-id-oauth
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://app.galxe.com/oauth
+        tokenUrl: https://api.galxe.com/oauth/auth/2/token
+scopes:
+  - scope: Email
+    description: Access the user's verified email address.
+    flows: [authorizationCode]
+  - scope: Twitter
+    description: Access the user's connected Twitter/X account.
+    flows: [authorizationCode]
+  - scope: Discord
+    description: Access the user's connected Discord account.
+    flows: [authorizationCode]
+  - scope: Github
+    description: Access the user's connected GitHub account.
+    flows: [authorizationCode]
+  - scope: Telegram
+    description: Access the user's connected Telegram account.
+    flows: [authorizationCode]
+  - scope: EVMAddress
+    description: Access the user's connected EVM (Ethereum-compatible) wallet address.
+    flows: [authorizationCode]
+  - scope: SolanaAddress
+    description: Access the user's connected Solana wallet address.
+    flows: [authorizationCode]
+  - scope: SeiAddress
+    description: Access the user's connected Sei wallet address.
+    flows: [authorizationCode]
+  - scope: AptosAddress
+    description: Access the user's connected Aptos wallet address.
+    flows: [authorizationCode]
+  - scope: InjectiveAddress
+    description: Access the user's connected Injective wallet address.
+    flows: [authorizationCode]
+  - scope: FlowAddress
+    description: Access the user's connected Flow wallet address.
+    flows: [authorizationCode]
+  - scope: GalxeID
+    description: Access the user's Galxe ID (universal Web3 identifier).
+    flows: [authorizationCode]

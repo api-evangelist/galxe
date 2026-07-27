@@ -1,9 +1,32 @@
 aid: galxe
 name: Galxe
-description: 'Galxe is a company surfaced as a portfolio company of multicoin-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: crypto-web3. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Galxe is a decentralized super app and one of web3's largest onchain
+  distribution platforms, serving 14M+ Galxe ID users across a product suite of
+  Quest, Passport, Score, Compass, and the Galxe Identity Protocol. For
+  developers, Galxe exposes a public Integration GraphQL API
+  (https://graphigo-business.prd.galaxy.eco/query) to query credentials, quests,
+  spaces, loyalty-points leaderboards, and Starboard social metrics, plus a
+  Credential API for pushing eligibility data, "Sign in with Galxe" OAuth 2.0 for
+  identity, and a TypeScript SDK for the zero-knowledge Galxe Identity Protocol.
+  API access uses a dashboard-issued access-token header with per-second rate
+  limits and monthly quotas. Originally surfaced as a portfolio company of
+  Multicoin Capital and enriched from Galxe's public developer documentation.
 url: https://raw.githubusercontent.com/api-evangelist/galxe/refs/heads/main/apis.yml
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://framerusercontent.com/assets/VIwrglmv5dnewbKhEV0KdBzBSAk.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +35,60 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Crypto Web3
-apis: []
+- Digital Identity
+- Credentials
+- Quests
+- Loyalty
+- GraphQL
+- OAuth
+- Blockchain
+apis:
+- name: Galxe Integration API
+  description: >-
+    Galxe's public GraphQL API for building web3 experiences — query credentials
+    and eligibility, quests, spaces, loyalty-points leaderboards, and Starboard
+    social/onchain influence metrics, and push credential eligibility data. Single
+    POST endpoint authenticated with an access-token header.
+  humanURL: https://docs.galxe.com/galxe-integration/introduction
+  baseURL: https://graphigo-business.prd.galaxy.eco/query
+  tags:
+  - GraphQL
+  - Credentials
+  - Quests
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://docs.galxe.com/galxe-integration/introduction
+  - type: APIReference
+    url: https://docs.galxe.com/galxe-integration/api-reference/quest
+  - type: GettingStarted
+    url: https://docs.galxe.com/galxe-integration/getting-started/quick-start
+  - type: Authentication
+    url: authentication/galxe-authentication.yml
+  - type: OAuthScopes
+    url: scopes/galxe-scopes.yml
+  - type: RateLimits
+    url: rate-limits/galxe-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/galxe-error-codes.yml
+  - type: Conventions
+    url: conventions/galxe-conventions.yml
+  - type: Idempotency
+    url: conventions/galxe-conventions.yml
+  - type: DataModel
+    url: data-model/galxe-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/galxe-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/galxe-changelog.yml
+  - type: Conformance
+    url: conformance/galxe-conformance.yml
+  - type: MCPServer
+    url: mcp/galxe-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +97,60 @@ maintainers:
 common:
 - type: Website
   url: https://galxe.com
+- type: DeveloperPortal
+  url: https://docs.galxe.com
+- type: Documentation
+  url: https://docs.galxe.com/galxe-integration/introduction
+- type: APIReference
+  url: https://docs.galxe.com/galxe-integration/api-reference/quest
+- type: GettingStarted
+  url: https://docs.galxe.com/galxe-integration/getting-started/quick-start
+- type: Support
+  url: https://docs.galxe.com/galxe-integration/resources/support
+- type: HelpCenter
+  url: https://help.galxe.com
+- type: GitHubOrganization
+  url: https://github.com/Galxe
+- type: SignUp
+  url: https://dashboard.galxe.com
+- type: TermsOfService
+  url: https://docs.galxe.com/about/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://docs.galxe.com/about/legal/privacy-policy
+- type: ChangeLog
+  url: changelog/galxe-changelog.yml
+- type: Authentication
+  url: authentication/galxe-authentication.yml
+- type: OAuthScopes
+  url: scopes/galxe-scopes.yml
+- type: Packages
+  url: packages/galxe-packages.yml
+- type: SDKs
+  url: packages/galxe-packages.yml
+- type: RateLimits
+  url: rate-limits/galxe-rate-limits.yml
+- type: ErrorCatalog
+  url: errors/galxe-error-codes.yml
+- type: Conventions
+  url: conventions/galxe-conventions.yml
+- type: Idempotency
+  url: conventions/galxe-conventions.yml
+- type: Lifecycle
+  url: lifecycle/galxe-lifecycle.yml
+- type: DataModel
+  url: data-model/galxe-data-model.yml
+- type: Conformance
+  url: conformance/galxe-conformance.yml
+- type: MCPServer
+  url: mcp/galxe-mcp.yml
+- type: LLMsTxt
+  url: llms/galxe-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/galxe-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration/resources/changelog
+docs: https://docs.galxe.com/galxe-integration/resources/changelog
+description: >-
+  Change history for the Galxe Integration API documentation. Galxe publishes a
+  dated changelog; the recent window is captured here.
+scheme: dated
+current_version: '2025-07-10'
+entries:
+  - version: Initial Release
+    date: '2025-07-10'
+    breaking: false
+    highlights:
+      - Initial release of the Galxe Integration API documentation.
+      - Complete API Reference (Credential, Quest, Space, Starboard).
+      - Integration guides, Quick Start, code examples, and error-handling docs.

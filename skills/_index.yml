@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: generated
+source: https://docs.galxe.com/galxe-integration/api-reference
+description: >-
+  Agent Skills for the Galxe Integration GraphQL API, each grounded in real
+  documented GraphQL operations (endpoint https://graphigo-business.prd.galaxy.eco/query,
+  auth via the access-token header).
+skills:
+  - file: galxe-check-user-eligibility.md
+    name: Check user eligibility for a Galxe credential
+    api: https://graphigo-business.prd.galaxy.eco/query
+    operations: [credential, credential.eligible]
+  - file: galxe-push-credential-items.md
+    name: Push members into a Galxe API credential
+    api: https://graphigo-business.prd.galaxy.eco/query
+    operations: [credentialItems]
+  - file: galxe-quest-leaderboard.md
+    name: Read Galxe quest status and space leaderboard
+    api: https://graphigo-business.prd.galaxy.eco/query
+    operations: [quest, space, space.loyaltyPointsRanks]

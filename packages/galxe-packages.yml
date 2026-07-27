@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/identity/sdk
+description: >-
+  First-party Galxe client libraries verified against the public package
+  registries and the Galxe GitHub organization (https://github.com/Galxe). The
+  Integration GraphQL API (https://graphigo-business.prd.galaxy.eco/query) ships
+  no dedicated server SDK — it is consumed over plain HTTP/GraphQL — so the one
+  published first-party library is the Galxe Identity Protocol TypeScript SDK.
+  Registry HTTP status recorded at fetch time.
+packages:
+  - language: typescript
+    registry: npm
+    name: "@galxe-identity-protocol/sdk"
+    url: https://www.npmjs.com/package/@galxe-identity-protocol/sdk
+    source: https://github.com/Galxe/identity-protocol
+    install: npm install @galxe-identity-protocol/sdk
+    version: 1.0.9
+    official: true
+    note: >-
+      TypeScript SDK for the Galxe Identity Protocol (zero-knowledge credential
+      issuance/verification). Documented at https://docs.galxe.com/identity/sdk.

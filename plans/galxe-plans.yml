@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration/resources/rate-limits
+description: >-
+  Access tiers for the Galxe Integration GraphQL API, from the published rate
+  limits & usage quotas page. Galxe does not publish per-request pricing; the
+  free tier is self-serve and higher limits are enterprise (contact sales).
+plans:
+  - name: Free
+    price: 0
+    rate_limit: 10 QPS
+    monthly_quota: 100000
+    self_serve: true
+  - name: Enterprise
+    price: contact-sales
+    rate_limit: up to 1000+ QPS
+    monthly_quota: 10000000
+    features:
+      - Higher rate limits
+      - Increased monthly quotas
+      - Priority / dedicated technical support
+      - SLA uptime and response-time guarantees

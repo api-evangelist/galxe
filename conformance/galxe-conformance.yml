@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration
+description: >-
+  Cross-cutting standards conformance for the Galxe APIs, asserted from the
+  published documentation. Galxe's public developer surface is GraphQL plus an
+  OAuth 2.0 identity flow; it does not publish a compliance/certification program
+  (SOC 2 / ISO 27001 / PCI), so no Compliance pointer is emitted.
+standards:
+  - id: graphql
+    conforms: true
+    evidence: Integration + Credential APIs are GraphQL over a single POST endpoint.
+  - id: oauth2
+    conforms: true
+    evidence: '"Sign in with Galxe" implements OAuth 2.0 authorization-code grant.'
+  - id: oauth2-pkce
+    conforms: true
+    evidence: Authorization flow supports code_challenge/code_challenge_method (PKCE).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use the GraphQL errors[]/extensions envelope, not application/problem+json.
+  - id: cursor-pagination
+    conforms: true
+    evidence: Leaderboard/ranking queries use cursorAfter/cursorBefore cursor pagination.
+  - id: idempotency
+    conforms: true
+    evidence: Credential API APPEND/REMOVE operations are documented as idempotent.

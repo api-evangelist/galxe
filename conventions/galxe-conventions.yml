@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration
+description: >-
+  Cross-cutting request/response semantics for the Galxe Integration GraphQL API
+  (single endpoint https://graphigo-business.prd.galaxy.eco/query) and the
+  Credential API, derived from the published documentation.
+transport:
+  protocol: graphql
+  endpoint: https://graphigo-business.prd.galaxy.eco/query
+  method: POST
+  content_type: application/json
+authentication:
+  style: api-key-header
+  header: access-token
+  ref: authentication/galxe-authentication.yml
+idempotency:
+  supported: true
+  mechanism: operation-semantic
+  description: >-
+    The Credential API credentialItems mutation exposes idempotent operations:
+    APPEND (add items to a credential list) and REMOVE (remove items) are
+    idempotent and safe to retry; REPLACE overwrites the entire list and is not
+    idempotent (recommended only for lists under 500 entries). Galxe documents
+    REMOVE-then-APPEND as the safe retryable pattern for large-scale updates in
+    place of REPLACE.
+  ref: https://docs.galxe.com/quest/credential-api/api-cred/introduction
+pagination:
+  style: cursor
+  params: [cursorAfter, cursorBefore, sprintId]
+  response_fields: [totalCount, list, pageInfo]
+  deprecated_params: [first, after]
+  description: >-
+    Leaderboard/ranking queries (space.loyaltyPointsRanks, starboard.leaderboard)
+    use cursor-based pagination via cursorAfter/cursorBefore. The legacy
+    first/after offset params are deprecated. No direct user-position lookup on
+    the B2B API — paginate to locate a user.
+rate_limiting:
+  signal: http-status
+  status: 429
+  free_tier: {rate: 10 QPS, monthly_quota: 100000}
+  ref: rate-limits/galxe-rate-limits.yml
+  guidance: exponential backoff and retry on 429
+error_envelope:
+  style: graphql-errors
+  description: >-
+    Errors return a top-level GraphQL `errors[]` array. Each error carries a
+    human-readable `message` plus an `extensions` object with `code`
+    (machine-readable), `category`, `http_status`, `request_id`, `timestamp`,
+    and optional `details[]`/`context`.
+  fields: [message, extensions.code, extensions.category, extensions.http_status, extensions.request_id, extensions.timestamp]
+  ref: errors/galxe-error-codes.yml
+request_tracing:
+  field: extensions.request_id
+  description: Every error response includes a request_id (e.g. req_123456789) for support correlation.
+versioning:
+  scheme: unversioned-endpoint
+  description: >-
+    Single stable GraphQL endpoint; evolution is additive with field-level
+    deprecation (see deprecated pagination params). No URL/path or header
+    version selector.
+  ref: lifecycle/galxe-lifecycle.yml

@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration/resources/rate-limits
+docs: https://docs.galxe.com/galxe-integration/resources/rate-limits
+description: >-
+  Rate limits and usage quotas for the Galxe Integration GraphQL API. Two limit
+  types apply: a per-second rate limit (QPS) and a monthly request quota. Both
+  return HTTP 429 Too Many Requests when exceeded.
+signal:
+  status: 429
+  header: null
+  guidance: exponential backoff and retry
+rate_limits:
+  - tier: free
+    endpoint: https://graphigo-business.prd.galaxy.eco/query
+    rate_limit: 10 QPS
+    limit_count: 10
+    interval: second
+    monthly_quota: 100000
+  - tier: enterprise
+    endpoint: https://graphigo-business.prd.galaxy.eco/query
+    rate_limit: up to 1000+ QPS
+    limit_count: 1000
+    interval: second
+    monthly_quota: 10000000
+    note: Contact Galxe for enterprise pricing; adds priority support and SLA guarantees.
+credential_api:
+  source: https://docs.galxe.com/quest/graphql-api/rate-limit
+  limits:
+    - 1500 requests / 5 minutes
+    - 10000 requests / 60 minutes
+  status: 429
+  note: >-
+    The Quest Credential API (push-data) documents burst limits of 1500 req/5min
+    and 10000 req/60min; contact Galxe to whitelist an external IP for higher
+    volume.

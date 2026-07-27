@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration/getting-started/authentication
+docs: https://docs.galxe.com/galxe-integration/resources/error-handling
+format: graphql-errors
+description: >-
+  Error-code registry for the Galxe Integration GraphQL API. Errors are returned
+  in the standard GraphQL top-level `errors[]` array; each entry adds an
+  `extensions` object with a machine-readable `code`, a `category`, the
+  equivalent `http_status`, a `request_id`, a `timestamp`, and optional
+  `details[]`/`context`. Captured verbatim from the published Authentication and
+  Error Handling references.
+envelope:
+  path: errors[].extensions
+  fields: [code, category, http_status, request_id, timestamp, details, context]
+errors:
+  - code: TOKEN_REQUIRED
+    category: AUTHENTICATION
+    http_status: 401
+    message: Access token is required
+    remediation: Add the `access-token` header to the request.
+  - code: INVALID_TOKEN
+    category: AUTHENTICATION
+    http_status: 401
+    message: 'Invalid access token: invalid token'
+    remediation: Regenerate the token in dashboard Settings → Server API.
+  - code: QUOTA_EXCEEDED
+    category: RATE_LIMIT
+    http_status: 429
+    message: 'API quota exceeded: daily limit reached'
+    remediation: Implement exponential backoff; upgrade quota via enterprise plan.
+  - code: PERMISSION_DENIED
+    category: AUTHORIZATION
+    http_status: 403
+    message: Insufficient permissions
+    remediation: Ensure the token's wallet has admin/owner access to the target space.
+  - code: NOT_FOUND
+    category: NOT_FOUND
+    http_status: 404
+    message: Resource not found
+    remediation: Verify the credential/quest/space ID exists.
+  - code: INVALID_ARGUMENT
+    category: VALIDATION
+    http_status: 400
+    message: Invalid input parameters
+    remediation: Check argument types and required fields against the API reference.

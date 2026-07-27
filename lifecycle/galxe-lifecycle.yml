@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.galxe.com/galxe-integration
+description: >-
+  Lifecycle posture for the Galxe Integration GraphQL API. The API is served
+  from a single stable, unversioned endpoint and evolves additively; individual
+  fields/parameters are deprecated rather than the endpoint being versioned.
+versioning:
+  scheme: unversioned-endpoint
+  current: null
+  endpoint: https://graphigo-business.prd.galaxy.eco/query
+  docs: https://docs.galxe.com/galxe-integration/introduction
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal deprecation-policy page or RFC 8594 Sunset/Deprecation header
+    support was found. Deprecation is signalled in the API reference at the
+    field/parameter level.
+deprecated_fields:
+  - space.loyaltyPointsRanks(first) — use cursorAfter (cursor pagination)
+  - space.loyaltyPointsRanks(after) — use cursorAfter (cursor pagination)
+sla:
+  url: null
+  note: SLA/uptime guarantees offered only on enterprise plans.
+status_page: null
+changelog: changelog/galxe-changelog.yml

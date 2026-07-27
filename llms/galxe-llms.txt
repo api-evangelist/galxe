@@ -1,0 +1,87 @@
+# Galxe Docs
+
+## Docs
+
+- [Galxe Astronaut Program](https://docs.galxe.com/about/community-programs/galxe-astronaut.md): Dive in to learn how you can accrue points and progress through the tiers to unlock an array of exciting rewards in Galxe Astronaut Program.
+- [Galxe Contributor Program](https://docs.galxe.com/about/community-programs/galxe-contributor.md): Galxe contributors are the backbone of the Galxe community and play a vital role in shaping the future of Web3.
+- [G DAO](https://docs.galxe.com/about/gal/dao.md): Understanding the governance of G DAO and how you can be part of it.
+- [Tokenomics](https://docs.galxe.com/about/gal/tokenomics.md): Understanding the GAL Token
+- [Overview](https://docs.galxe.com/about/introduction.md): Galxe is a decentralized super app and web3’s largest onchain distribution platform. Through its robust infrastructure and product suite of modular AI, digital identity, and blockchain technologies — Quest, Passport, Score, Compass, and Alva — Galxe supports the development of advanced, user-friendl…
+- [Galxe Passport Privacy Policy](https://docs.galxe.com/about/legal/passport-privacy-policy.md): Last Updated: March 1, 2025
+- [Galxe Passport Terms of Use](https://docs.galxe.com/about/legal/passport-terms-of-use.md): Effective Date: March 1, 2025
+- [Galxe Privacy Policy](https://docs.galxe.com/about/legal/privacy-policy.md): Last Updated: September 10, 2025
+- [Staking Terms and Conditions](https://docs.galxe.com/about/legal/staking-terms-and-conditions.md): Last Updated: April 23, 2024
+- [Galxe Terms of Use](https://docs.galxe.com/about/legal/terms-of-service.md): Effective Date: September 10th, 2025
+- [Official Channels ](https://docs.galxe.com/about/official-channels.md): Find out the official social channels of Galxe
+- [Sign in with Galxe](https://docs.galxe.com/galxe-id/galxe-id-integration/galxe-id-oauth.md): Integrating **Sign in with Galxe** in your app to get access to 14 million users of Galxe ID
+- [Galxe Passport](https://docs.galxe.com/galxe-id/galxe-passport/introduction.md): Galxe Passport is the most trusted Web3 identity service for proof of personhood
+- [Introduction](https://docs.galxe.com/galxe-id/introduction.md): Galxe ID is your universal Web3 identity service
+- [Credential API Reference](https://docs.galxe.com/galxe-integration/api-reference/credential.md): Query user credentials and check eligibility for verification requirements
+- [Quest API Reference](https://docs.galxe.com/galxe-integration/api-reference/quest.md): Query quest information and check user eligibility for quest requirements
+- [Space API Reference](https://docs.galxe.com/galxe-integration/api-reference/space.md): Query space information and loyalty points rankings
+- [Starboard API Reference](https://docs.galxe.com/galxe-integration/api-reference/starboard.md): Track Twitter influence rankings and social metrics
+- [Authentication](https://docs.galxe.com/galxe-integration/getting-started/authentication.md): All Galxe API requests require a valid access token for authentication
+- [Common Integration Patterns](https://docs.galxe.com/galxe-integration/getting-started/common-patterns.md): Reusable code patterns and GraphQL queries for efficient Galxe integration
+- [Quick Start](https://docs.galxe.com/galxe-integration/getting-started/quick-start.md): Get your first API call working in under 3 minutes
+- [Leaderboard Integration](https://docs.galxe.com/galxe-integration/guides/leaderboards.md): Create engaging leaderboard systems with real-time rankings and user analytics
+- [Loyalty Program Integration](https://docs.galxe.com/galxe-integration/guides/loyalty-program.md): Create engaging loyalty programs with point systems and leaderboard analytics
+- [Quest Integration](https://docs.galxe.com/galxe-integration/guides/quests.md): Build complete quest workflows with eligibility verification and status tracking
+- [Starboard Integration Guide](https://docs.galxe.com/galxe-integration/guides/starboards.md): Track Twitter influence and social metrics with rankings and engagement analytics
+- [User Verification & Credential Validation](https://docs.galxe.com/galxe-integration/guides/user-verification.md): Implement user eligibility verification using Galxe's credential system for access control
+- [Galxe Integration](https://docs.galxe.com/galxe-integration/introduction.md): Build powerful Web3 experiences with Galxe's comprehensive GraphQL API
+- [Changelog](https://docs.galxe.com/galxe-integration/resources/changelog.md): Track the latest updates, new features, and important changes to Galxe Integration API
+- [Error Handling Guide](https://docs.galxe.com/galxe-integration/resources/error-handling.md): Comprehensive guide to handling Galxe API errors, including error codes, response formats, and troubleshooting strategies
+- [Rate Limits & Usage Quotas](https://docs.galxe.com/galxe-integration/resources/rate-limits.md): Understanding API rate limits, usage quotas, and best practices for the Galxe Integration API
+- [Support & Community](https://docs.galxe.com/galxe-integration/resources/support.md): Get the help you need and connect with the Galxe developer community
+- [Future works](https://docs.galxe.com/identity/future-works/future-works.md)
+- [Galxe Identity Protocol](https://docs.galxe.com/identity/introduction.md): Where Identity Meets Privacy, Where You Take Control
+- [Background](https://docs.galxe.com/identity/introduction/background.md)
+- [Case Studies](https://docs.galxe.com/identity/introduction/case-studies.md)
+- [Concepts](https://docs.galxe.com/identity/introduction/concepts.md)
+- [Overview](https://docs.galxe.com/identity/introduction/overview.md)
+- [Roles](https://docs.galxe.com/identity/introduction/roles.md)
+- [Contracts](https://docs.galxe.com/identity/resources/contracts.md)
+- [TypeScript SDK](https://docs.galxe.com/identity/sdk.md)
+- [Credential Format](https://docs.galxe.com/identity/specification/credential-format.md)
+- [Overview](https://docs.galxe.com/identity/specification/overview.md)
+- [Primitive Types](https://docs.galxe.com/identity/specification/primitive-types.md)
+- [Technical Components](https://docs.galxe.com/identity/specification/technical-components.md)
+- [Type DSL](https://docs.galxe.com/identity/specification/type-dsl.md)
+- [Workflow](https://docs.galxe.com/identity/specification/workflow.md)
+- [Proof Generation & Verification Workflow](https://docs.galxe.com/identity/tutorials/simple-workflow.md): Hands-On Zero-Knowledge Proofs with Galxe Identity Protocol
+- [Proof Aggregation & Verification with NEBRA](https://docs.galxe.com/identity/tutorials/use-nebra-upa.md): Utilizing NEBRA as proof aggregator
+- [Galxe Passport](https://docs.galxe.com/identity/use-cases/galxe-passport.md): Issue and verify Galxe Passport v2 credential
+- [Ideas](https://docs.galxe.com/identity/use-cases/ideas.md)
+- [LoyaltyPoint](https://docs.galxe.com/loyalty-points/contracts/loyalty-point.md)
+- [LoyaltyPointFactory](https://docs.galxe.com/loyalty-points/contracts/loyalty-point-factory.md)
+- [API](https://docs.galxe.com/loyalty-points/getting-started/api.md)
+- [Hook](https://docs.galxe.com/loyalty-points/getting-started/hook.md)
+- [Galxe Loyalty Points](https://docs.galxe.com/loyalty-points/getting-started/introduction.md)
+- [Quick Start](https://docs.galxe.com/loyalty-points/getting-started/quick-start.md)
+- [Config](https://docs.galxe.com/quest/credential-api/api-cred/config.md): Learn how to configure API Credential.
+- [Introduction](https://docs.galxe.com/quest/credential-api/api-cred/introduction.md)
+- [Config](https://docs.galxe.com/quest/credential-api/contract-query-cred/config.md): Learn how to configure Contract Query Credential
+- [Introduction](https://docs.galxe.com/quest/credential-api/contract-query-cred/introduction.md)
+- [Introduction](https://docs.galxe.com/quest/credential-api/graphql-cred/introduction.md)
+- [Multi Dimensional Config](https://docs.galxe.com/quest/credential-api/graphql-cred/multi-config.md): Learn how to configure GraphQL Multi-Dimensional Credential
+- [Single Dimensional Config](https://docs.galxe.com/quest/credential-api/graphql-cred/single-config.md): Learn how to configure GraphQL Single-Dimensional Credential
+- [CORS Check](https://docs.galxe.com/quest/credential-api/overview/cross-domain-check.md): The Galxe platform uses a Cross-Origin Resource Sharing (CORS) check mechanism to ensure that the target API explicitly authorizes calls from the Galxe backend. The role of CORS is to verify whether the API accepts cross-origin requests, ensuring the legality and security of interactions. The target…
+- [Introduction](https://docs.galxe.com/quest/credential-api/overview/introduction.md)
+- [Introduction](https://docs.galxe.com/quest/credential-api/rest-cred/introduction.md)
+- [Multi Dimensional Config](https://docs.galxe.com/quest/credential-api/rest-cred/multi-config.md): Learn how to configure REST Multi-Dimensional Credential
+- [Single Dimensional Config](https://docs.galxe.com/quest/credential-api/rest-cred/single-config.md): Learn how to configure REST Single-Dimensional Credential
+- [What is Galxe Quest](https://docs.galxe.com/quest/introduction.md)
+- [Smart Contract Audits](https://docs.galxe.com/quest/smart-contract/audit.md)
+- [SpaceStation](https://docs.galxe.com/quest/smart-contract/contracts/spacestation.md)
+- [StarNFT](https://docs.galxe.com/quest/smart-contract/contracts/starnft.md)
+- [Introduction](https://docs.galxe.com/quest/smart-contract/introduction.md)
+
+## OpenAPI Specs
+
+- [openapi](https://docs.galxe.com/api-reference/openapi.json)
+
+## Optional
+
+- [Help Center](https://help.galxe.com/en/)
+- [Legal](https://docs.galxe.com/about/legal)
+- [Alva Docs ↗](https://docs.alva.xyz)
