@@ -2,43 +2,50 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://docs.galxe.com/galxe-integration/api-reference
-description: >-
-  Candidate MCP server tool surface derived from the documented Galxe
-  Integration GraphQL root fields. Galxe publishes no official hosted/remote MCP
-  server as of this pass; these tools map 1:1 to real GraphQL queries/mutations
-  and would back a stdio/http MCP server over
-  https://graphigo-business.prd.galaxy.eco/query (auth: access-token header).
+description: 'Candidate MCP server tool surface derived from the documented Galxe Integration GraphQL
+  root fields. Galxe publishes no official hosted/remote MCP server as of this pass; these tools map 1:1
+  to real GraphQL queries/mutations and would back a stdio/http MCP server over https://graphigo-business.prd.galaxy.eco/query
+  (auth: access-token header).'
 server:
   name: galxe
   transport: http
   url: null
-  auth: {type: apiKey, in: header, name: access-token}
+  auth:
+    type: apiKey
+    in: header
+    name: access-token
   endpoint: https://graphigo-business.prd.galaxy.eco/query
 tools:
-  - name: get_credential
-    description: Fetch a credential's information by credential ID.
-    source_operation: graphql:query.credential(id)
-  - name: check_credential_eligibility
-    description: Check whether an address is eligible for a credential (0/1).
-    source_operation: graphql:query.credential.eligible(address, campaignId)
-  - name: get_quest
-    description: Get quest details (name, status, participantsCount, type) by ID.
-    source_operation: graphql:query.quest(id)
-  - name: list_space_quests
-    description: List the quests within a space.
-    source_operation: graphql:query.campaigns(ListQuestInput)
-  - name: get_space
-    description: Get space information by numeric space ID.
-    source_operation: graphql:query.space(id)
-  - name: get_space_leaderboard
-    description: Get a space's loyalty-points leaderboard (cursor-paginated).
-    source_operation: graphql:query.space.loyaltyPointsRanks(cursorAfter, sprintId)
-  - name: get_starboard
-    description: Get Starboard (Twitter/onchain influence) info by ID.
-    source_operation: graphql:query.starboard(id)
-  - name: get_starboard_leaderboard
-    description: Get a Starboard leaderboard with rankings and metrics.
-    source_operation: graphql:query.starboard.leaderboard(first, after)
-  - name: update_credential_items
-    description: Append, remove, or replace items on an API credential list.
-    source_operation: graphql:mutation.credentialItems(APPEND|REMOVE|REPLACE)
+- name: get_credential
+  description: Fetch a credential's information by credential ID.
+  source_operation: graphql:query.credential(id)
+- name: check_credential_eligibility
+  description: Check whether an address is eligible for a credential (0/1).
+  source_operation: graphql:query.credential.eligible(address, campaignId)
+- name: get_quest
+  description: Get quest details (name, status, participantsCount, type) by ID.
+  source_operation: graphql:query.quest(id)
+- name: list_space_quests
+  description: List the quests within a space.
+  source_operation: graphql:query.campaigns(ListQuestInput)
+- name: get_space
+  description: Get space information by numeric space ID.
+  source_operation: graphql:query.space(id)
+- name: get_space_leaderboard
+  description: Get a space's loyalty-points leaderboard (cursor-paginated).
+  source_operation: graphql:query.space.loyaltyPointsRanks(cursorAfter, sprintId)
+- name: get_starboard
+  description: Get Starboard (Twitter/onchain influence) info by ID.
+  source_operation: graphql:query.starboard(id)
+- name: get_starboard_leaderboard
+  description: Get a Starboard leaderboard with rankings and metrics.
+  source_operation: graphql:query.starboard.leaderboard(first, after)
+- name: update_credential_items
+  description: Append, remove, or replace items on an API credential list.
+  source_operation: graphql:mutation.credentialItems(APPEND|REMOVE|REPLACE)
+deployment:
+  mode: none
+  verified: derived
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
