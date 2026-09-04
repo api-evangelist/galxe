@@ -108,8 +108,9 @@ apis:
     url: changelog/galxe-changelog.yml
   - type: Conformance
     url: conformance/galxe-conformance.yml
-  - type: MCPServer
+  - type: X-MCPServerCandidate
     url: mcp/galxe-mcp.yml
+    note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -162,8 +163,9 @@ common:
   url: data-model/galxe-data-model.yml
 - type: Conformance
   url: conformance/galxe-conformance.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/galxe-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/galxe-llms.txt
 - type: AgentSkill
