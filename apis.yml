@@ -47,6 +47,10 @@ x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
+x-docs-hosting: vercel
 tags:
 - Company
 - Crypto Web3
@@ -57,6 +61,7 @@ tags:
 - GraphQL
 - Authentication
 - Blockchain
+- Web3
 tags_raw:
 - Company
 - Crypto Web3
@@ -67,6 +72,7 @@ tags_raw:
 - GraphQL
 - OAuth
 - Blockchain
+- Web3
 apis:
 - name: Galxe Integration API
   description: >-
