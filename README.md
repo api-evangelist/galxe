@@ -64,6 +64,120 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Galxe is a company surfaced as a portfolio company of multicoin-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto-web3. This profile is a lead awaiting the enrichment pipeline.
+Galxe is a decentralized super app and one of web3's largest onchain distribution platforms, serving 14M+ Galxe ID users across a product suite of Quest, Passport, Score, Compass, and the Galxe Identity Protocol. For developers, Galxe exposes a public Integration GraphQL API (https://graphigo-business.prd.galaxy.eco/query) to query credentials, quests, spaces, loyalty-points leaderboards, and Starboard social metrics, plus a Credential API for pushing eligibility data, "Sign in with Galxe" OAuth 2.0 for identity, and a TypeScript SDK for the zero-knowledge Galxe Identity Protocol. API access uses a dashboard-issued access-token header with per-second rate limits and monthly quotas. Originally surfaced as a portfolio company of Multicoin Capital and enriched from Galxe's public developer documentation.
 
-Backed by: multicoin-capital — https://galxe.com
+**Areas:** Company · Web3 · Digital Identity · Credentials · Quests · Loyalty · GraphQL · Authentication · Blockchain
+
+## Galxe on APIs.io
+
+Everything profiled for Galxe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/galxe/](https://apis.io/providers/galxe/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Galxe Integration API](https://apis.io/apis/galxe/galxe-integration-api/) — Galxe's public GraphQL API for building web3 experiences — query credentials and eligibility, quests, spaces, loyalty-points leaderboards, and Starboard…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [galxe](https://apis.io/servers/galxe/galxe/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Galxe Authentication](https://apis.io/security/galxe/galxe-authentication/)
+- [Galxe Domain Security](https://apis.io/security/galxe/galxe-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Galxe Scopes](https://apis.io/scopes/galxe/galxe-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Galxe Plans](https://apis.io/plans/galxe/galxe-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Galxe Rate Limits](https://apis.io/rate-limits/galxe/galxe-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://galxe.com)
+- [Documentation](https://docs.galxe.com/galxe-integration/introduction)
+- [Getting started](https://docs.galxe.com/galxe-integration/getting-started/quick-start)
+- [API reference](https://docs.galxe.com/galxe-integration/api-reference/quest)
+- [Pricing](https://docs.galxe.com/galxe-integration/resources/rate-limits)
+- [Sign up](https://dashboard.galxe.com)
+- [Support](https://docs.galxe.com/galxe-integration/resources/support)
+- [Blog](https://www.galxe.com/press)
+- [Terms of service](https://docs.galxe.com/about/legal/terms-of-service)
+- [Privacy policy](https://docs.galxe.com/about/legal/privacy-policy)
+- [GitHub](https://github.com/Galxe)
+
+## API Evangelist rating
+
+**Kin Score 41.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 52.6 |
+
+**Agent readiness 12.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/galxe/](https://apis.io/providers/galxe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Galxe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/galxe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
